@@ -1,0 +1,14 @@
+﻿<personas>
+<contact
+	name="juan"
+	age="22"
+	heigth="170"
+>
+
+<contact
+	name="maria"
+	age="23"
+	heigth="160"
+>
+
+</personas>
