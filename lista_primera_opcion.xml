@@ -1,0 +1,22 @@
+<!--list -->
+<list>
+	<contacts>
+		
+		<names
+			l1n= "juan"
+			l2n= "maria"
+			l3n= "antonio"
+		>
+		<ages
+			l1a= "22"
+			l2a= "23"
+			l3a= "24"
+		>
+		<height
+			l1h= "170"
+			l2h= "160"
+			l3h= "180"
+		>
+	</contacts>
+
+</list>
