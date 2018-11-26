@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--Autor: Lucia M. Holguin-->
+<html lang= "es">
+	<head>
+		<meta charset= "UTF-8"/>
+		<title> usando solo while</title>
+	</head>
+	
+	<body>
+		<h1> usando solo while</h1>
+		
+
+	 </body>
+	 <script>
+	var numPrin = prompt("Dime un numero de comienzo");
+    //var numPrin2 = prompt ("dime un numero");
+    var numFin = prompt("dime un numero de fin");
+    var veces = numFin;
+    var contador = numPrin;
+    var contador2= numPrin; 
+    contador = parseFloat (contador);
+    contador2 = parseFloat (contador2);
+    veces = parseFloat (veces);
+   
+	/*while(contador > veces || contador < veces){
+		contador= contador-1;
+        veces= veces-1;
+        //es imposible porque el bucle siempre siempre va repetir los comandos que tiene dentro
+        alert(contador);
+        alert(veces);
+	}*/
+    //contador > veces || contador==veces || contador2 < veces || contador2 == veces
+
+    while (contador > veces || contador2 < veces ){
+        contador = contador-1;
+        //alert (contador);
+        contador2 = contador2+1;
+        alert(" contador descendente "+contador+ " contador ascendente "+contador2);
+    }
+    
+
+	 </script>
+</html>
