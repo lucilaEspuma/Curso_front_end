@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--Autor: Lucia M. Holguin-->
+<html lang= "es">
+	<head>
+		<meta charset= "UTF-8"/>
+		<title> T&iacute;tulo </title>
+	</head>
+	
+	<body>
+		<h1> cabecera </h1>
+		
+
+	 </body>
+	 <script>
+		 var numPrin = prompt("Dime un numero de comienzo");
+         var numFin = prompt("dime un numero de fin");
+    var veces = numFin;
+    var contador = numPrin;
+    contador = parseFloat (contador);
+    veces = parseFloat (veces);
+
+    while(contador != veces){
+        //alert("valores: veces= "+ veces + " ; contador = "+contador);
+      // console.log("valores: veces= "+ veces +"; contador = "+contador);
+      if(contador <= veces){
+        contador= contador+1;
+        alert(contador);
+    }
+        
+       else if(contador >= veces){
+        contador= contador-1;
+        alert(contador);
+        }
+
+        //con el bucle fuera del if 
+        //sin ningun if >>dos bucles
+        //solo con un bucle
+        
+    }
+	 </script>
+</html>
