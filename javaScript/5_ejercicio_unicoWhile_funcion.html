@@ -22,16 +22,10 @@
     contador2 = parseFloat (contador2);
     veces = parseFloat (veces);
    
-	/*while(contador > veces || contador < veces){
-		contador= contador-1;
-        veces= veces-1;
-        //es imposible porque el bucle siempre siempre va repetir los comandos que tiene dentro
-        alert(contador);
-        alert(veces);
-	}*/
-    //contador > veces || contador==veces || contador2 < veces || contador2 == veces
 
-    while (contador > veces || contador2 < veces ){
+    while (contador > veces || contador < veces){
+        
+        Math.sign(-contador);
         contador = contador-1;
         //alert (contador); 
         contador2 = contador2+1;

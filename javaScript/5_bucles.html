@@ -12,8 +12,8 @@
 
 	 </body>
 	 <script>
-		 var numPrin = prompt("Dime un numero de comienzo");
-         var numFin = prompt("dime un numero de fin");
+	var numPrin = prompt("Dime un numero de comienzo");
+    var numFin = prompt("dime un numero de fin");
     var veces = numFin;
     var contador = numPrin;
     contador = parseFloat (contador);
@@ -22,20 +22,22 @@
     while(contador != veces){
         //alert("valores: veces= "+ veces + " ; contador = "+contador);
       // console.log("valores: veces= "+ veces +"; contador = "+contador);
-      if(contador <= veces){
-        contador= contador+1;
-        alert(contador);
+      //alert(contador);
+      if(contador < veces){
+       contador= contador+1;
+        
     }
         
-       else if(contador >= veces){
-        contador= contador-1;
-        alert(contador);
+       else if(contador > veces){
+         contador= contador-1;
         }
 
+      
         //con el bucle fuera del if 
         //sin ningun if >>dos bucles
         //solo con un bucle
         
     }
+    alert(contador);
 	 </script>
 </html>
