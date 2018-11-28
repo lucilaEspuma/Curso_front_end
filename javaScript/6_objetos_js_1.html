@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang= "es">
+	<head>
+		<meta charset= "UTF-8"/>
+		<title> Objeto document </title>
+	</head>
+	
+	<body>
+        <h1> objeto document </h1>
+        <script>
+                //document es un objeto y write es el método (funcion asignada a un objeto)
+                //document es la página web
+                //window es el marco
+                //document.write("<h2>MUcho mucho</h2>");
+                //document.write("poco poco");
+               // var nombre = prompt("introduzca nombre:");
+                var edad = prompt("introduzca edad:");
+                edad = parseInt(edad);
+               
+               
+              while(isNaN(edad) ||edad == "" || edad <= 0){
+
+                if (isNaN(edad)){
+                alert("Edad tiene que tener valor numérico");
+                }
+                else if(edad == ""){
+                alert("es que no tienes edad?");
+                }
+                edad= prompt("introduce tu edad");
+                
+                if(edad <= 18){
+                    alert("para acceder necesitas ser mayor de edad");
+                }
+                
+              }
+
+
+
+            
+        </script>
+     </body>
+    
+</html>

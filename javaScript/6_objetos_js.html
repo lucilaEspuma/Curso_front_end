@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang= "es">
+	<head>
+		<meta charset= "UTF-8"/>
+		<title> Objeto document </title>
+	</head>
+	
+	<body>
+        <h1> objeto document </h1>
+        <script>
+                //document es un objeto y write es el método (funcion asignada a un objeto)
+                //document es la página web
+                //window es el marco
+                document.write("<h2>MUcho mucho</h2>");
+                document.write("poco poco");
+                var nombre = prompt("introduzca nombre:");
+                var edad = prompt("introduzca edad:");
+               
+               
+                while(nombre == ""){
+                    alert("¿no tienes nombre?");
+                    nombre= prompt("escribe tu nombre otra vez");
+                }
+
+                document.write("<br/>ANda! Te llamas  "+nombre);
+                document.write("<br/>Qué viejoven! Tienes  "+edad+" años");
+
+            
+        </script>
+     </body>
+    
+</html>

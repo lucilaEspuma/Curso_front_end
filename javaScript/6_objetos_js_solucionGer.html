@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang= "es">
+	<head>
+		<meta charset= "UTF-8"/>
+		<title> Objeto document </title>
+	</head>
+	
+	<body>
+        <h1> objeto document </h1>
+        <script>
+                //document es un objeto y write es el método (funcion asignada a un objeto)
+                //document es la página web
+                //window es el marco
+                //document.write("<h2>MUcho mucho</h2>");
+                //document.write("poco poco");
+               // var nombre = prompt("introduzca nombre:");
+            //var edad = prompt("introduzca edad:");
+                //edad = parseInt(edad);
+                var nombre = "";
+                var texEdad= ""; // esta variable es texto que en la siguiente linea se transforma con parseInt en un numero
+                var edad = parseInt(texEdad);//Esta variable es un número y nos permite entrar en el loop
+                //var nunNombre= parseInt(nombre);
+                //var hola = "hola"
+              while(isNaN(edad) || edad<=0){
+                texEdad = prompt("introduzca edad:");
+                edad = parseInt(texEdad);
+               }
+               var nunNombre= parseInt(nombre);
+               //NaN hace ya la función de parseInt
+            while(nombre == "" || isNaN(nombre)== false){
+                nombre= prompt("introduzca NOMBRE:");
+            }
+            document.write("<br/>Anda! Te llamas  "+nombre);
+            document.write("<br/>Qué viejoven! Tienes  "+edad+" años");
+ 
+                
+
+
+
+            
+        </script>
+     </body>
+    
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang= "es">
+	<head>
+		<meta charset= "UTF-8"/>
+		<title> String metodos y propiedades </title>
+	</head>
+	
+	<body>
+		<h1> strings metodos y propiedades </h1>
+		<script>
+		//alert("HOla Juan:\n\t-Tu edad es: \n\t-\"20 años\"");
+        /*string.concat ()
+        string.length()// no es metodo si no una propiedad
+        string.charAt(posicion);//comprueba caracter a caracter que es
+        string.touppercase()
+        string.tolowercase()
+        string.indexof(); //nos da la posicion en la cadena de caracteres de un caracter especifico
+        string.lastindexof();
+        string.substring(principio, fin); //devuelve un intervalo de la cadena */
+        var texto= prompt("introduzca un texto");
+        var texto2 = "pofckpoaiklflfo";
+        document.write("</br>");
+        document.write("Su texto: ");
+        document.write("</br>");
+        document.write(texto);
+        document.write("</br>");
+        document.write("Longitud: "+texto.length);
+        document.write("</br>");
+        document.write("En mayuscula: "+texto.toUpperCase());
+        document.write("</br>");
+        document.write("En minuscula: "+texto.toLowerCase());
+        document.write("</br>");
+        document.write("Primer caracter: "+texto.charAt(0));
+        document.write("</br>");
+        document.write("quinto caracter: "+texto.charAt(4));
+        document.write("</br>");
+        document.write("Primer espacio: "+texto.indexOf(" "));
+        document.write("</br> Primer mitad del texto: "+texto.substring(0, texto.length/2));
+        document.write("</br> segunda mitad del texto: "+texto.substring(texto.length/2));
+
+        //1 Hacer la primera letra MAYUS y el resto minuscula: "HOLA">>"Hola"
+        //2 Convertir la 1º letra de cada palabra a mayúsculas y las demás minúsculas: "JUAN perez">> "Juan Perez" echra un ojo para la funcion indexOf
+        //3 Mostrar solo las iniciales: "juan perez" "J.P."
+
+       
+		</script>
+
+	 </body>
+</html>  
