@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang= "es">
+	<head>
+		<meta charset= "UTF-8"/>
+		<title> String metodos y propiedades </title>
+	</head>
+	
+	<body>
+		<h1> strings metodos y propiedades </h1>
+		<script>
+	
+        /*var texto= prompt("introduzca un texto");
+        var texto2 = "pofckpoaiklflfo";
+        document.write("</br>");
+        document.write("Su texto: ");
+        document.write("</br>");
+        document.write(texto);
+        document.write("</br>");
+        document.write("Longitud: "+texto.length);
+        document.write("</br>");
+        document.write("En mayuscula: "+texto.toUpperCase());
+        document.write("</br>");
+        document.write("En minuscula: "+texto.toLowerCase());
+        document.write("</br>");
+        document.write("Primer caracter: "+texto.charAt(0));
+        document.write("</br>");
+        document.write("quinto caracter: "+texto.charAt(4));
+        document.write("</br>");
+        document.write("Primer espacio: "+texto.indexOf(" "));
+        document.write("</br> Primer mitad del texto: "+texto.substring(0, texto.length/2));
+        document.write("</br> segunda mitad del texto: "+texto.substring(texto.length/2));*/
+
+        //1 Hacer la primera letra MAYUS y el resto minuscula: "HOLA">>"Hola"
+
+       /* var hola= "hola";
+        var OLA = hola.substring(1);
+        var h = hola.charAt(0);
+        var H = h.toUpperCase();
+        var ola = OLA.toLowerCase();
+        document.write("</br>"+H+ola);
+        
+        //otra version
+        document.write("</br>"+hola.charAt(0).toUpperCase()+hola.substring(1).toLowerCase());*/
+
+        //2 Convertir la 1º letra de cada palabra a mayúsculas 
+        //y las demás minúsculas: "JUAN perez">> "Juan Perez" echa un ojo para la funcion indexOf
+        //var nombre= prompt("Introduce texto") /*"juan perez";*/
+        /*var nombre= "juan perez";
+      
+        var j = nombre.charAt(0);
+        var J = j.toUpperCase();
+        var uan = nombre.substring(1,4);
+        var p = nombre.charAt(5);
+        var erez = nombre.substring(6,10);
+        var P = p.toUpperCase();
+        document.write("</br>"+J+uan+" "+P+erez);*/
+
+        //2 solucion german
+        var nombre= "juan perez rodriguez";
+        var posPrimerEspacio = nombre.indexOf(" ");
+        var posSegundoEspacio = nombre.indexOf(" ",posPrimerEspacio+1);
+        var primeraPalabra = nombre.substring(0,posPrimerEspacio);
+
+        //mostrar en propercase solo la primera palabra
+        document.write("</br>"+primeraPalabra.charAt(0).toUpperCase()
+        +primeraPalabra.substring(0+1).toLowerCase());
+
+        var segundaPalabra = nombre.substring(posPrimerEspacio+1, posSegundoEspacio);
+
+        document.write("</br>"+segundaPalabra.charAt(0).toUpperCase()
+        +segundaPalabra.substring(0+1).toLowerCase());
+
+        var terceraPalabra = nombre.substring(posSegundoEspacio+1, nombre.length);
+        
+        document.write("</br>"+terceraPalabra.charAt(0).toUpperCase()
+        +terceraPalabra.substring(0+1).toLowerCase());
+        
+
+        
+
+
+
+        //3 Mostrar solo las iniciales: "juan perez" "J.P."
+
+       
+		</script>
+
+	 </body>
+</html>  

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang= "es">
+	<head>
+		<meta charset= "UTF-8"/>
+		<title> String metodos y propiedades </title>
+	</head>
+	
+	<body>
+		<h1> strings metodos y propiedades </h1>
+		<script>
+	
+        /*var texto= prompt("introduzca un texto");
+        var texto2 = "pofckpoaiklflfo";
+        document.write("</br>");
+        document.write("Su texto: ");
+        document.write("</br>");
+        document.write(texto);
+        document.write("</br>");
+        document.write("Longitud: "+texto.length);
+        document.write("</br>");
+        document.write("En mayuscula: "+texto.toUpperCase());
+        document.write("</br>");
+        document.write("En minuscula: "+texto.toLowerCase());
+        document.write("</br>");
+        document.write("Primer caracter: "+texto.charAt(0));
+        document.write("</br>");
+        document.write("quinto caracter: "+texto.charAt(4));
+        document.write("</br>");
+        document.write("Primer espacio: "+texto.indexOf(" "));
+        document.write("</br> Primer mitad del texto: "+texto.substring(0, texto.length/2));
+        document.write("</br> segunda mitad del texto: "+texto.substring(texto.length/2));*/
+
+        //1 Hacer la primera letra MAYUS y el resto minuscula: "HOLA">>"Hola"
+
+       /* var hola= "hola";
+        var OLA = hola.substring(1);
+        var h = hola.charAt(0);
+        var H = h.toUpperCase();
+        var ola = OLA.toLowerCase();
+        document.write("</br>"+H+ola);
+        
+        //otra version
+        document.write("</br>"+hola.charAt(0).toUpperCase()+hola.substring(1).toLowerCase());*/
+
+        //2 Convertir la 1º letra de cada palabra a mayúsculas 
+        //y las demás minúsculas: "JUAN perez">> "Juan Perez" echa un ojo para la funcion indexOf
+        //var nombre= prompt("Introduce texto") /*"juan perez";*/
+        
+
+
+         //3 Mostrar solo las iniciales: "juan perez" "J.P."
+        /* var nombre = "juan perez molina";
+         var J =nombre.charAt(0).toUpperCase();
+         var posEspacio1 = nombre.indexOf(" ");
+         var posEspacio2 = nombre.indexOf(" ",posEspacio1+1);
+         var P = nombre.charAt(posEspacio1+1).toUpperCase();
+         var M = nombre.charAt(posEspacio2+1).toUpperCase();
+
+         document.write("</br>"+ J+"."+P+"."+M+".");*/
+            var nombre = "juan perez";
+            var posEspacio = 0;
+            var posEspaciofin= posEspacio+letras;
+            var letra = nombre.charAt(0).toUpperCase();
+            var letras =  nombre.substring(1,posEspacio).toLowerCase();
+            var iniciales = "";
+            var resto = "";
+           //mientras consigamos un espacio 
+
+            while(posEspacio >= 0 ) {
+                
+                /*if(posEspacio == 0){
+                    posEspacio=-1;
+                }*/
+                iniciales= iniciales +letra+letras;
+                posEspacio = nombre.indexOf(" ", posEspacio + 1);
+                
+                letra = nombre.charAt(posEspacio + 1).toUpperCase();
+                letras= nombre.substring(posEspacio+2,posEspaciofin+2).toLowerCase();
+                
+                
+                 }
+            document.write(iniciales+"</br>");
+       
+		</script>
+
+	 </body>
+</html>  

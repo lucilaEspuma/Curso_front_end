@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang= "es">
+	<head>
+		<meta charset= "UTF-8"/>
+		<title> String metodos y propiedades </title>
+	</head>
+	
+	<body>
+		<h1> strings metodos y propiedades </h1>
+		<script>
+	
+            var texto= "juan perez lopez rodriguez";
+            var posEspacio_1= texto.indexOf(" ");
+            var inicial = texto.charAt(0).toUpperCase();
+            var restoPalabra = texto.substring(1, posEspacio_1).toLowerCase();
+            var propperCase = inicial + restoPalabra;
+            var posEspacio_2;
+           //mientras consigamos un espacio 
+
+            while(posEspacio_1 >= 0 ) {
+                
+              posEspacio_2= texto.indexOf(" ", posEspacio_1+1);
+
+              if(posEspacio_2 == -1){
+                  posEspacio_2 = texto.length;
+                    }
+                inicial = texto.charAt(posEspacio_1+1).toUpperCase();
+                restoPalabra= texto.substring(posEspacio_1+2, posEspacio_2);
+                propperCase = propperCase+" "+inicial+restoPalabra;
+                posEspacio_1 = texto.indexOf(" ",posEspacio_1+1);
+                
+            }
+            document.write(propperCase+"</br>");
+
+       
+		</script>
+
+	 </body>
+</html>  
