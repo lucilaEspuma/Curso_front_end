@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--Autor: Lucia M. Holguin-->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title> Ejemplos de object </title>
+</head>
+
+<body>
+    <h1> Ejemplos de object </h1>
+    <script>
+        //object es una función que lo que hace es construir el objeto. es una función constructora
+         //La palabra clave new crea un nuevo objeto
+
+        /*var miPimerObj = new Object();
+        miPimerObj.unSubValor = 10; // el objeto puede tener un subValor de un int
+        miPimerObj.otraPropiedad = "un texto"; //un string
+        miPimerObj.atributoObjeto = new Object();//un object 
+        miPimerObj.vsriableMiembro = true;// boolean*/
+        
+        var persona_1 = new Object();
+        persona_1.nombre = "Ana";
+        persona_1.apellido_1 = "Pérez";
+        persona_1.apellido_2 = "Rodriguez";
+        
+        persona_1.edad = "25";
+        document.write(persona_1.apellido_1+" "+ persona_1.apellido_2+" ,"+ persona_1.nombre);
+        document.write("</br> edad:  "+ persona_1.edad);
+        persona_1.salario = prompt("Dime el salario de"+ persona_1.nombre);
+        persona_1.salario = parseFloat(persona_1.salario);
+        if (persona_1.salario > 0){
+            persona_1.tieneTrabajo = true;
+        }
+        else{
+            persona_1.tieneTrabajo = false;
+        }
+        if (persona_1.tieneTrabajo){
+            document.write("</br> Tiene trabajo");
+        }
+        else{
+            document.write("</br> No tiene trabajo");
+        }
+
+
+
+
+    </script>
+
+</html>
+
+</body>

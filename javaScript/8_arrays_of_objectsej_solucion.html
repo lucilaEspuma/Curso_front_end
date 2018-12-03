@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--Autor: Lucia M. Holguin-->
+<html lang= "es">
+	<head>
+		<meta charset= "UTF-8"/>
+		<title> ejemplos array </title>
+	</head>
+	
+	<body>
+		<h1> ejemplos array</h1>
+		
+
+	 </body>
+	 <script>
+   
+    var i = 0;
+    var j = 0;
+    //var ciudades = [prompt("ciudad1"),prompt("ciudad2"),prompt("ciudad3")];
+    
+    var ciudades = new Array();
+    var NuevaCiudad = prompt("introduce ciudades");
+    ciudades[i] = NuevaCiudad;
+
+    while (NuevaCiudad != "" ){
+        ciudades[i]= NuevaCiudad;
+        i= i+1;
+        NuevaCiudad = prompt("Introduce ciudades")
+       
+        
+    }
+  
+    while (j< ciudades.length){
+        document.write("</br>"+ciudades[j]);
+        j= j+1;
+        
+    }
+
+
+
+
+
+
+
+
+	
+
+	 </script>
+</html>

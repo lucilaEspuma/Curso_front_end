@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--Autor: Lucia M. Holguin-->
+<html lang= "es">
+	<head>
+		<meta charset= "UTF-8"/>
+		<title> ejemplos array </title>
+	</head>
+	
+	<body>
+		<h1> ejemplos array</h1>
+		
+
+	 </body>
+	 <script>
+    /*var moviles= new Array();
+    moviles[0]= new Object();
+    moviles[0].marca= "SOny ericsson";
+    moviles[0].ram= 2;
+
+    
+    moviles[1]= new Object();
+    moviles[1].marca= "Nokia";
+    moviles[1].ram= 3;
+
+    
+    moviles[2]= new Object();
+    moviles[2].marca= "Samsung";
+    moviles[2].ram= 4;
+
+    moviles[1].ram = 6;
+    document.write("</br> nueva RAM :"+ moviles[1].ram+"Gb");
+
+    document.write("</br> RAM ultimo elemento:"+ moviles[moviles.length-1].ram+"Gb");*/
+    //Pedir al usuario a las ciudades que quiere viajar, 
+    //si el usuario se equivoca y no mete ciudades dejando un campo vacio el progrma termina y muestra la lista.
+
+    //var ciudades = [prompt("introduce tres ciudades a las que quieras viajar:")];
+    /*ciudades[0]= ciudades;
+    ciudades[2]= ciudades;
+    ciudades[3]= ciudades;*/
+    var i = 0;
+    //var ciudades = [prompt("ciudad1"),prompt("ciudad2"),prompt("ciudad3")];
+    var NuevaCiudad = prompt("introduce ciudades");
+    var ciudades = new Array();
+    ciudades[i] = NuevaCiudad;
+
+    while (i< 4){
+        NuevaCiudad = prompt("Introduce ciudades")
+        ciudades[i]= NuevaCiudad;
+        document.write(ciudades[i]);
+        i= i+1;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	 </script>
+</html>

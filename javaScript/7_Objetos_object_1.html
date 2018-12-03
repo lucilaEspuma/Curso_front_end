@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--Autor: Lucia M. Holguin-->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title> Ejemplos de object </title>
+</head>
+
+<body>
+    <h1> Ejemplos de object </h1>
+    <script>
+        //object es una función que lo que hace es construir el objeto. es una función constructora
+         //La palabra clave new crea un nuevo objeto
+
+        /*var miPimerObj = new Object();
+        miPimerObj.unSubValor = 10; // el objeto puede tener un subValor de un int
+        miPimerObj.otraPropiedad = "un texto"; //un string
+        miPimerObj.atributoObjeto = new Object();//un object 
+        miPimerObj.vsriableMiembro = true;// boolean*/
+
+        //Preguntar en que orden quiere mostrar los datos
+        
+        var persona_1 = new Object();
+        persona_1.nombre = "Lacia";
+        persona_1.apellido_1 = "Pérez";
+        persona_1.apellido_2 = "Rodriguez";
+        
+        persona_1.edad = "25";
+
+        var persona_2 = new Object();
+        persona_2.nombre = prompt("Escribe tu nombre"); //prompt("Dime tu nombre:");
+        persona_2.apellido_1 = prompt("Escribe tu 1 apellido");//prompt("Dime tu 1 apellido:");
+        persona_2.apellido_2 = prompt("Escribe tu 2 apellido");//prompt("Dime tu 2 apellido:");
+        persona_2.edad ="25" //prompt("Dime tu edad:");
+        var inputletra = prompt("Pulsa N: ordenar por nombre. </br> Pulsa A: ordenar por apellido. </br> Pulsa E: para ordenar por edad.");
+        //var alphaApellido = prompt("Pulsa A mayuscula para ordenar alfabeticamente tus Apellidos");
+        //var numEdad; 
+        //document.write(persona_2.apellido_2+" "+ persona_2.apellido_2+" ,"+ persona_2.nombre);
+        //document.write("</br> edad:  "+ persona_2.edad);
+        
+      
+        if(inputletra.toUpperCase() == "N")
+        {
+            if(persona_2.nombre < persona_1.nombre || persona_2.nombre.toUpperCase() < persona_1.nombre.toUpperCase() ) 
+            {
+            document.write("</br>Nombre</br>"+persona_2.nombre+"</br>"+persona_1.nombre);
+            }
+            else if( persona_2.nombre > persona_1.nombre)
+            {
+            document.write("</br>Nombre</br>"+persona_1.nombre+"</br>"+persona_2.nombre);
+           
+            }
+        }
+
+
+        if (inputletra.toUpperCase() == "A") 
+        {
+            if(persona_2.apellido_1 < persona_1.apellido_1 || persona_2.apellido_1 > persona_1.apellido_1) 
+            {
+                document.write("</br> Primer apellido: "+persona_2.apellido_1+"</br> "+persona_1.apellido_1);
+            }
+
+            else if(persona_2.apellido_1 > persona_1.apellido_1) 
+            {
+                document.write("</br> Primer apellido:</br> "+persona_1.apellido_1+"</br> "+persona_2.apellido_1);
+            }
+
+            if(persona_2.apellido_2 < persona_1.apellido_2) 
+            {
+            document.write("</br> Segundo apellido:</br> "+persona_2.apellido_2+"</br>"+persona_1.apellido_2);
+            }
+           
+            else if(persona_2.apellido_2 < persona_1.apellido_2 || persona_2.apellido_2 > persona_1.apellido_2) 
+            {
+            document.write("</br> Segundo apellido: </br>"+persona_1.apellido_2+" </br> "+persona_2.apellido_2);
+            } 
+        }
+        
+        
+        //persona_2.salario = //prompt("Dime el salario de"+ persona_2.nombre);
+        //persona_1.salario = parseFloat(persona_2.salario);
+       
+       
+       
+        /*if (persona_2.salario > 0){
+            persona_2.tieneTrabajo = true;
+        }
+        else{
+            persona_2.tieneTrabajo = false;
+        }
+        if (persona_2.tieneTrabajo){
+            document.write("</br> Tiene trabajo");
+        }
+        else{
+            document.write("</br> No tiene trabajo");
+        }*/
+
+
+
+
+    </script>
+
+</html>
+
+</body>
