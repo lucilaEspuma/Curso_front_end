@@ -41,7 +41,28 @@
         else{
             document.write("</br> No tiene trabajo");
         }
-
+        var persona_2 = new Object();
+        persona_2.nombre = prompt("Dime tu nombre:");
+        persona_2.apellido_1 = prompt("Dime tu 1 apellido:");
+        persona_2.apellido_2 = prompt("Dime tu 2 apellido:");
+        persona_2.edad = prompt("Dime tu edad:");
+        document.write(persona_2.apellido_2+" "+ persona_2.apellido_2+" ,"+ persona_2.nombre);
+        document.write("</br> edad:  "+ persona_2.edad);
+        persona_2.salario = prompt("Dime el salario de"+ persona_2.nombre);
+        persona_1.salario = parseFloat(persona_2.salario);
+        if (persona_2.salario > 0){
+            persona_2.tieneTrabajo = true;
+        }
+        else{
+            persona_2.tieneTrabajo = false;
+        }
+        if (persona_2.tieneTrabajo){
+            document.write("</br> Tiene trabajo");
+        }
+        else{
+            document.write("</br> No tiene trabajo");
+        }
+ 
 
 
 
