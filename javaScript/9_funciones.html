@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--Autor: Lucia M. Holguin-->
+<html lang= "es">
+	<head>
+		<meta charset= "UTF-8"/>
+		<title> Funciones 1 </title>
+	</head>
+	
+	<body>
+		<h1> cabecera </h1>
+		<script>
+
+
+      // 1.Función básica: Ni recibe ni deuelve, pero hace cosas.
+      function mostrarTitulo(){ // aquí se crea la función, lo que hace, pero para poder utilizarla hay que llamar a la función
+        document.write("<h2>Subtitulo de la pagina</h2>");
+        document.write("</br>");
+  
+      }
+      mostrarTitulo(); //Aquí se llama a una función
+      
+      //2.funcion que recibe datos
+      //los valores que recibe la funcion al ser creada se llaman parámetros
+      function calculaDescuento(precio,descuento){ //Aquí se declara la función
+        var precioConDesc;
+        precioConDesc = precio-precio*descuento/100;
+        document.write("precio"+precio+", descuento"+ descuento+", total "+ precioConDesc+"</br>")
+
+      }
+      
+      //los valores que asignamos cuando llamamos una función se llaman argumentos
+      calculaDescuento(100,50);//Aquí se llama la función
+      calculaDescuento(100,20);
+      var otroPrecio= 300;
+      var otroDescuento= 20;
+      calculaDescuento(otroPrecio,otroDescuento);
+      //consejo: es importante no utilizar variables globales.
+
+  
+     </script>
+	 </body>
+	 
+</html>

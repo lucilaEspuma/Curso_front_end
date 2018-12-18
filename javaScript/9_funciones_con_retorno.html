@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--Autor: Lucia M. Holguin-->
+<html lang= "es">
+	<head>
+		<meta charset= "UTF-8"/>
+		<title> Funciones 2 </title>
+	</head>
+	
+	<body>
+		<h1> Funciones con retorno </h1>
+		<script>
+      //3. Funciones con retorno.
+      function dameTitulo(){
+        return "Título de funciones con retorno";
+
+      }
+      document.write("<h1>"+ dameTitulo() + "</h1>");
+      document.write("<h2>"+ dameTitulo() + "</h2>");
+      var tituloWeb = "<h3>"+ dameTitulo() + "</h3>";
+      document.write(tituloWeb);
+
+      function dameCabecera (texto,nivel){
+        var abreH= "<h" + nivel+ ">";
+        var cierraH= "</h"+ nivel+ ">";
+        return abreH+ texto + cierraH;
+
+      }
+     document.write(dameCabecera("cabecera nivel 1", 1));
+     document.write(dameCabecera("cabecera nivel 2", 2));
+     document.write(dameCabecera("cabecera nivel 3", 3));
+
+    
+  
+
+  
+     </script>
+	 </body>
+	 
+</html>
