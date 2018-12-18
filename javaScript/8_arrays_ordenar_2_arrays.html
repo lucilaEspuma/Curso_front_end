@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--Autor: Lucia M. Holguin-->
+<html lang= "es">
+	<head>
+		<meta charset= "UTF-8"/>
+		<title> ejemplos array </title>
+	</head>
+	
+	<body>
+		<h1> ejemplos array</h1>
+		
+
+	 </body>
+	 <script>
+    // manera 1 de declarar un array
+	
+
+    var numerosDes = new Array();
+    numerosDes = [6,2,5,1];
+    var numerosOrdenados = new Array();
+    var numMenor= numerosDes[0];
+   
+   for(var i=0; i< numerosDes.length; i++)
+   {
+      
+        
+    if(numMenor > numerosDes[i]){
+        numMenor = numerosDes[i];
+    }
+
+    } 
+    numerosOrdenados [0] = numMenor; // en el index o de mi array ordenado situo el numero menor
+    var segMenor = numerosDes[0] // semenor es igual al primer index del array
+    var posMenor;
+    for (var i = 0; i<4; i++){
+        if (posMenor != numerosDes[i]){
+            if( seMenor> numerosDes[i]) {
+                 segMenor= numerosDes[i];
+            }
+           
+        }
+    }
+     document.write(numMenor);
+//necesitamos un array para almacenar el numero menor y compararlo con el siguiente menor, esto se desarrolla en otro for loop
+	 </script>
+</html>
