@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title Page</title>
+
+   
+  </head>
+  <body>
+    <div id="d1" style="margin: 0px 0px 0px 5px; background-color: chocolate">
+      texto cualquiera
+
+    </div>
+   <script>
+     var posicion = 5; 
+     var d1= document.getElementById("d1");// busca en el documento el/los elementos con el id: d1 y asignaselos a la variable d1. (esta variable lleva el mismo nombre que el id= d1 pero no es lo mismo, es una variable nueva)
+     //función que anima la posición del div de izq a derecha
+     function funCadaDecimaSeg(){
+       posicion ++; // en esta funcion la var posicion va sumando 1 infinitamente.
+       d1.setAttribute("style", "margin: 0px 0px 0px " + posicion + "px; background-color: chocolate;"); // aquí le decimos que a nuestro elemento almacenado en la var, de nombre d1, le cambiemos al atributo de margin la posicion de la izquierda con la varible position.
+
+     }
+     setInterval(funCadaDecimaSeg, 10);
+   
+   </script>
+
+  
+  </body>
+</html>
