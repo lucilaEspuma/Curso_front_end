@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--Autor: Lucia M. Holguin-->
+<html lang= "es">
+	<head>
+		<meta charset= "UTF-8"/>
+		<title> Funciones 2 </title>
+	</head>
+	
+	<body>
+		<h1> Funciones con retorno </h1>
+		<script>
+      /*Crea una función que:
+        1-Muestre 6 cabeceras del H1 al H6 con titulo que se pase por parámetro (mediante bucle)
+        2-Otra reciba 3 parámetros.
+          Los dos primeros son los operandos (los numero que entran en una funcion), el 3º el operador ( suma "+", resta"-", multiplicación "*", div "/") y que muestre el resultado dentro de la función.
+          PISTA: Usando condicionales y return
+          oper(3,5, "+") =---> 8
+          oper(3,5, "*") =---> 15
+        3-Una función que eleve al cubo un número. Comprobar que funciona con 3 (27) y con 4 (64)
+        */
+
+      //1
+      function dameCabecera(texto, nivel){
+        var abreH= "<h" + nivel+ ">";
+        var cierraH= "</h"+ nivel+ ">";
+        return abreH+ texto + cierraH ;
+
+      }
+      
+      for(var i= 0; i <= 6; i++){
+       
+      document.write(dameCabecera("cabecera nivel "+i , i));
+     
+    }
+
+
+
+
+      //2
+      function tresParametros(operando1, operando2, operador){
+        if (operador == ""){ //si operador es igual a texto realizar la operacion.
+        return operando1 operador operando2;
+      }
+        
+        }
+
+        tresParametros(2, 4, "*");
+
+        
+     //3 Una función que eleve al cubo un número. Comprobar que funciona con 3 (27) y con 4 (64)
+    function elevaCubo(numeroXe){
+      
+      return numeroXe * numeroXe * numeroXe;
+      
+    }
+    document.write(elevaCubo(4));
+    
+  
+     </script>
+	 </body>
+	 
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--Autor: Lucia M. Holguin-->
+<html lang= "es">
+	<head>
+		<meta charset= "UTF-8"/>
+		<title> Funciones 2 </title>
+	</head>
+	
+	<body>
+		<h1> Funciones con retorno </h1>
+		<script>
+      /*Crea las mismas funciones pero usando:
+        1-EN la 1, con un array que tenga los valores. var cabeceras = ["h1", "h2","h3",..."h6"]
+        2-En la 2, dos funciones que hagan lo mismo pero:
+            a) Usando la función eval() (funcion built in JS), que ejecuta un texto como si fuera código JS.
+            b)Dos usando sólo el operador ternario (sin if())
+        3-Una función que eleve a la X potencia (segundo parámetro), mediante un bucle y si sabes lo que es una función recursiva, con una función recursiva.
+        */
+
+      //1
+      /*var cabeceras = ["h1", "h2", "h3","h4","h5","h6"];
+      function dameCabecera(texto, nivel){
+        var abreH= "<h" + nivel+ ">";
+        var cierraH= "</h"+ nivel+ ">";
+        return abreH+ texto + cierraH ;
+       
+      }
+      
+      for(var i= 0; i < 5; i++){
+       cabeceras[i];
+      document.write(dameCabecera("cabecera nivel " , i));
+     
+    }*/
+
+
+
+
+      /*//2
+      function tresParametros(operando1, operando2, operador){
+        if (operador == ""){ //si operador es igual a texto realizar la operacion.
+        return operando1 operador operando2;
+      }
+        
+        }
+
+        tresParametros(2, 4, "*");*/
+
+        
+     //3 Una función que eleve al cubo un número. Comprobar que funciona con 3 (27) y con 4 (64)
+    function elevaXn (numeroXe){
+      if (numeroXe === 0){
+        return 0;
+      }
+      else{
+        return numeroXe * elevaXn(numeroXe);
+      }
+      /*for(var i = 0; i < elevadoX; i++) //en este bucle se multiplica un numero por si mismo tnatas veces como esté indicado en la variable elevadoX.
+      {}*/
+
+      }
+      
+    elevaXn(4);
+    
+  
+     </script>
+	 </body>
+	 
+</html>
