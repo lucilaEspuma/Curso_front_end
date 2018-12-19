@@ -20,10 +20,18 @@
      //función que anima la posición del div de izq a derecha
       
      var relojId = setInterval(funCadaDecimaSeg, 10);
+     var velocidad = 0.1;
+     
      function funCadaDecimaSeg(){
-       posicion ++; // en esta funcion la var posicion va sumando 1 infinitamente.
-       d1.setAttribute("style", "margin: 0px 0px 0px " + posicion + "px; background-color: chocolate;"); // aquí le decimos que a nuestro elemento almacenado en la var, de nombre d1, le cambiemos al atributo de margin la posicion de la izquierda con la varible position.
-
+       if (posicion >= window.innerWidth-200){ //el objeto window es un objeto del navegador.
+         clearInterval(relojId);
+       }
+       else {
+       posicion += velocidad; // en esta funcion la var posicion va sumando 1 infinitamente.
+       velocidad+= 0.05;
+       d1.setAttribute("style", "margin: 0px 0px 0px " + posicion + "px; background-color: chocolate; width:200px;"); // aquí le decimos que a nuestro elemento almacenado en la var, de nombre d1, le cambiemos al atributo de margin la posicion de la izquierda con la varible position.
+      
+      }
      }
 
      /*setInterval(funCadaDecimaSeg, 10); //llama a la función que le pasemos cada 10 seg , sirve para configurar un intervalo de tiempo*/

@@ -1,0 +1,115 @@
+@charset "utf-8";
+/* CSS Document */
+.marco{
+    position:relative;
+    /*background-color: black;*/
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    border-bottom: medium;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+}
+.circulo{ 
+    position: absolute;
+    left:0;
+
+    width: 394px;
+    height: 394px;
+    border-radius: 100%;
+    border-color: red;
+    border-width: 3px;
+    border-style:solid;
+    animation-name: vueltas;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    
+    
+
+}
+@keyframes vueltas{
+    0% {
+        width:394px;
+        left:0;
+    }
+    50% {
+        width: 0px;
+        left:200px;
+
+    }
+    100% {
+        width:394px;
+        left:0;
+
+    }
+}
+.delay1{
+    animation-delay: 0.05s;
+    border-color: rgba(255,0,4,0.5);
+    
+}
+.delay2{
+    animation-delay:0.1s;
+    border-color: rgba(255,0,4,0.1);
+
+}
+.posicionPelota{
+    position:absolute;
+    left:50%;
+    bottom: 0%;
+}
+.pelota{
+
+    position:absolute;
+    /*left:300 px;*/
+    bottom:0px;
+
+    width:200px;
+    height: 200px;
+    border-radius: 100% ;
+    background-color: #456CA2;
+
+    box-shadow: 30px -40px 140px rgba(0,0,0,0.7) inset;
+
+    animation-name:bote;
+    animation-duration: 3s;
+    animation-iteration-count:infinite;
+    /*animation-timing-function: linear;*/
+
+
+
+
+
+}
+@keyframes bote{
+    0% {
+        bottom: 300px;
+        width: 250px ;
+        height: 150px;
+        left: 300px;
+    }
+    25% {
+        bottom: 300px;
+        width: 150;
+        height: 250 ;
+        
+    }
+    50% {
+        bottom: 0px;
+        width: 250px ;
+        height: 150px;
+
+    }
+    75% {
+        bottom: 300px;
+        width: 150px ;
+        height: 300px ;
+
+    }
+    100% {
+        bottom: 300px;
+        width: 250px;
+        height: 150px;
+
+    }
+}
