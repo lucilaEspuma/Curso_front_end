@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Ejemplo formularios</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" media="screen and (min-width: 600px)" href="3_formulariosJS.css">
+</head>
+<header>
+	<nav class="header">
+					
+							<a href= "#" class="botonMenu2">Inicio</a>
+							<a href= "#" class="botonMenu2">Contacto</a>
+							<a href= "#" class="botonMenu2">Blog</a>
+							<a href= "#" class="botonMenu2">Random</a>
+							<a href= "#" class="botonMenu2">Hello</a>
+							<a href= "#" class="botonMenu2">Cat</a>
+					
+	</nav>
+</header>
+<body class="clase_body">
+	<section class="contenedorFlex">
+	<h1>Formulario de registro</h1>
+	<form action="0_plantilla.html" method="get">
+		<input type="submit" value="ENVIAR POR MAIL" class="botonMenu2"/>
+		<input type="button" value="Validar" onclick="validar()" class="botonMenu2" />
+		<table>
+			<tr>
+				<td>Nombre:</td>
+				<td><input id="nombre" size="30" maxlength="50" /></td>
+			</tr>
+			<tr>
+				<td>Primer apellido:</td>
+				<td><input id="primer_apellido" size="30" maxlength="50" /></td>
+			</tr>
+			<tr>
+				<td>Segundo apellido:</td>
+				<td><input id="segundo_apellido" size="30" maxlength="50" /></td>
+			</tr>
+			<tr>
+				<td>Email: </td>
+				<td><input id="email" size="30" maxlength="100" /></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input id="password" type="password" maxlength="20" /></td>
+			</tr>
+			<tr>
+				<td>Password 2:</td>
+				<td><input id="password_rep" type="password" maxlength="20" /></td>
+			</tr>
+			<tr>
+				<td>Sugerencias:</td>
+				<td><textarea id="sugerencias" rows="10">
+		Me gustaría que...
+	</textarea></td>
+			</tr>
+
+		</table>
+	</form>
+</section>
+	<script src="3_formulariosJS.js"></script>
+</body>
+
+</html>

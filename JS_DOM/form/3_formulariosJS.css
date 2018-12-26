@@ -1,0 +1,116 @@
+@charset "utf-8";
+/* CSS Document *//*sistemas de cajas flex*//*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+.contenedorFlex{
+    width: 75%;
+    min-height: 10em;
+    background-color: grey;
+    margin: auto;
+    display:flex; /* esta propiedad activa el sistema flex: por defecto coloca las cajas en row. Tb se puede usar column or column-reverse (que apila en orden inverso)*/
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*overflow: auto;*/
+}
+
+.header{
+    background-color: grey;
+    height: 4em;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;/* esta propiedad nos justifica las cajas y tiene diferentes propiedades*/
+    
+}
+.botonMenu2{
+    background-color: rgb(185, 150, 150);
+    padding: 10px;
+    margin: 10px;
+    flex-grow: 0.5;
+    text-decoration:none;
+}
+.cajaFlex{
+    width: 8em; /* anccho de la caja*/
+    min-height: 8em; /* la altura mínima para que no desaparezca la caja*/
+    background-color: darkgrey; /* color de fondo*/
+    margin:5px; 
+    
+    
+    border-radius: 10px;/* redondea los bordes*/
+    line-height: 1em;/* interlineado*/
+    font-size:1em;
+    text-align: center;
+   
+    /*flex-direction:column;*/
+
+}
+.f1{
+    flex-grow: 1;
+}
+.f2{
+    flex-grow: 0;
+}
+body{
+    background-color: dimgrey;
+    margin:0;
+}
+.subContenedor{ /*esta clase crea contenedores dentro de nuestra cajaFlex, no hemos consguido que se adapte flex-grow (al ancho) solo se adapta al alto por que está en column*/
+    margin:5px;
+    background-color: aqua;
+    width: 5em;
+    height: 5em;
+    /*flex-grow: 1;*/
+}
+.e100{
+    width: 90%;
+    flex-grow:1;
+}
+.e33{
+    width: 30%;
+    flex-grow: 1;
+
+}
+.e25{
+    width: 20%;
+    flex-grow: 1;
+
+}
+.e75{
+    width: 20%;
+    flex-grow: 3;
+
+}
+a {
+
+    list-style:none;
+}
+    
+
+/*.botonMenu2:hover {
+    box-shadow:0 0 0 rgb(255, 254, 251);
+    top: 5px;
+    background-color: rgb(250, 241, 241);
+    transition:0.5s;
+        
+    }*/
+
+
+@media only screen and (max-width: 600px) {
+    .cajaFlex{
+        width: 8em; /* anccho de la caja*/
+        min-height: 8em; /* la altura mínima para que no desaparezca la caja*/
+        background-color: rgb(100, 28, 28); /* color de fondo*/
+        margin:5px; 
+        
+        
+        border-radius: 10px;/* redondea los bordes*/
+        line-height: 1em;/* interlineado*/
+        font-size:1em;
+        text-align: center;
+       
+        /*flex-direction:column;*/
+    
+    }
+   
+    
+    }
+  footer{
+
+  }  
