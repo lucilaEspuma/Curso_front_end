@@ -1,3 +1,3 @@
 /* Realizar un programa que pida la carga de dos vectores numéricos (dos arrays). Obtener la suma de los dos vectores ( la suma de dos arrays aumenta la lista del array, si un array crea 8 indx y se suma a otro de 9 index se crea un array nuevo que tiene 17 index), dicho resultado guardarlo en un tercer vector del mismo tamaño. Sumar componente a componente.
-El tamaño del vector es a elección. */
+El tamaño del vector es a elección. https://www.tutorialesprogramacionya.com/javascriptya/problemas/problema.php?cod=20&inicio=20*/
       
