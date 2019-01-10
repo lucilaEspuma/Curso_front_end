@@ -1,4 +1,4 @@
-
+//1_intentar hacer el de modificar (buscar por nombre y modificar la edad y el email) y para el de eliminar necesitamos una funcion que se llama .slice().
 var listaPersonas; //creamos un array para añadir los datos de nuestro formulario. Este array es global y cuando almacenamos objetos en el podemos usar el array en otra función y reconocerá las propiedades del objeto.
 jQuery(document).ready(function() { //la función ready va llamar a la funcion que lleva dentro para que se ejecute cuando todo el código esté cargado.
   listaPersonas= new Array();
