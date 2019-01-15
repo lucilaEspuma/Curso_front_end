@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Ejemplo mini jquery</title>
+	<meta charset="UTF-8" /> 
+	
+</head>
+
+
+<body>
+<!--
+  <h4>Nombre: </h4><input id="inputNombre" size= "20" type="Nombre"> </br>
+  <h4>Edad: </h4><input id="inputEdad" size= "20" type="Edad"> </br>
+  <h4>Email: </h4><input id="inputEmail" size= "20" type="Email"> </br>
+  <h4>Profesion: </h4><input id="inputProfesion" size= "20" type="Profesión"> </br>
+  </br>
+  <input type="button" value="Añadir" onclick="addPersona();">
+  <input type="button" value="Modificar" onclick="modificarPersona();">
+  <input type="button" value="Eliminar" onclick="eliminarPersona();">
+  <input type="button" value="Listar" onclick="addPerList();">
+  <div id="mensajes"></div>-->
+  <div id="div_texto"></div>
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="02_JQuery_intro.js"></script>
+  <script>
+        //mediante la funcion JQuery le pides el id de la etiqueta en la que quieres escribir la fecha
+        //en la funcion html escribo el texto año + el año (.getFullYear) de mi objeto (fechaActual) fecha
+    function funcionPrincipal(){
+      var fechaActual = new Date();//variable objeto de fecha
+        $("#div_texto").html("Año: "+ fechaActual.getFullYear()); 
+        $("#div_texto").html($("#div_texto").html()+ dameHora());//Se llama al id del div_texto 
+    }
+   
+    //llamada al documento, prepara el document que es el objeto de HTML
+      //la funcion ready prepara el documento y recibe un parametro que es una funcion.
+   //$(document).ready(funcionPrincipal);
+   setInterval(funcionPrincipal,1000); //da un intervalo de tiempo para animar
+   var posX= 0;
+   function moverDiv(){
+     var valoresCss = new Object();
+     valoresCss.marginLeft = posX +"px";
+     $("#div_texto").css(valoresCss);
+     posX++;
+    // $("#div_texto").css({"margin-left" : posX + "px"})
+   }
+   setInterval(moverDiv,50);
+  </script>
+
+</body>
+
+</html>

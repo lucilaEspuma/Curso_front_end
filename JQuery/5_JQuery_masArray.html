@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Ejemplo mini jquery</title>
+	<meta charset="UTF-8" /> 
+	
+</head>
+
+
+<body>
+<!--
+  <h4>Nombre: </h4><input id="inputNombre" size= "20" type="Nombre"> </br>
+  <h4>Edad: </h4><input id="inputEdad" size= "20" type="Edad"> </br>
+  <h4>Email: </h4><input id="inputEmail" size= "20" type="Email"> </br>
+  <h4>Profesion: </h4><input id="inputProfesion" size= "20" type="Profesión"> </br>
+  </br>
+  <input type="button" value="Añadir" onclick="addPersona();">
+  <input type="button" value="Modificar" onclick="modificarPersona();">
+  <input type="button" value="Eliminar" onclick="eliminarPersona();">
+  <input type="button" value="Listar" onclick="addPerList();">
+  <div id="mensajes"></div>-->
+  <div id="div_texto"></div>
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="5_JQuery_masArray.js"></script>
+  <script>
+       
+    function funcionPrincipal(){
+      var listaA = new Array(8,3,9,5);
+      var listaB = new Array("Peras", "Fresas","Arándanos","Manzanas");
+      var listaMez = listaA.concat(listaB);
+      for(var i = 0; i< listaMez.length; i++){
+      $("#div_texto").html($("#div_texto").html()+"<p>"+ listaMez[i]+"</p>")
+      }
+    
+    $("#div_texto").append("</br> JOIN: "+listaMez.join());
+    listaMez = listaMez.reverse();
+    $("#div_texto").append("</br> REVERSE: "+listaMez.join());
+    listaMez = listaMez.sort();
+    $("#div_texto").append("</br> SORT: "+listaMez.join());
+
+    }
+
+
+   
+   jQuery(document).ready(funcionPrincipal);
+  </script>
+
+</body>
+
+</html>
