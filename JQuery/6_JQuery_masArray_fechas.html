@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-	<title>Ejemplo mini jquery</title>
+	<title>Fechas con JS/funcion callback</title>
 	<meta charset="UTF-8" /> 
 	
 </head>
@@ -18,8 +18,52 @@
   crossorigin="anonymous"></script>
   <script src="6_JQuery_masArray_fechas.js"></script>
   <script>
-       
+       //creamos un array con fechas
+       //ordenamos por el modo por defecto de sort 
+       //Haremos una funcion 
+       //La funcion ordenarFechaYear es una funcion de ordenamiento !!VER METODOS DE ORDENAMIENTO: seleccion, insercion, burbuja, quickSort es el método con el que funciona la función sort.
+       function compararFechaYear (a, b){
+        /* if(a.getTime()<b.getTime()){
+          return -1
+         }
+         else if(a.getTime()<b.getTime()){
+
+         } Con el getTime podemos comparar los milisegundos*/
+         if(a.getFullYear() > b.getFullYear()){
+           return 1; //el primero es mayor
+         }
+         if(a.getFullYear() < b.getFullYear()){
+           return -1; //el segundo es mayor
+         }
+         else{
+           return 0; //son iguales
+         }
+
+       }
+
     function funcionPrincipal(){
+      var fechas = [ 
+
+        new Date(123456789124), //nos sirve para tener una unica unidad en la que medir la fecha y facilita la comunicacion entre aplicaciones.
+        new Date(2018,12,1,9),
+        new Date("January 9, 2019 09:00:00"),
+        new Date("February 12, 2018 09:00:00"),
+      ];
+     //Mostramos las fechas tal cual:
+    $("#div_texto").html((new Date()).toString()); //toString 
+    $("#div_texto").append("<h2>"+ fechas.join("</br>")+"</h2>");
+     var fechasSort = fechas.sort();
+     $("#div_texto").append("</br><h2>" + fechasSort.join("</br>"));
+      //la funcion call back ordena por fecha
+      //si la funcion devuelve +1: el primer numero es mayor 0:son iguales y cuando devuelve -1: el segundo es mayor.
+      //Comprobamos la funcion de comparación que devuelve 1, 0 o -1
+      $("#div_texto").append("</br><h2>"+compararFechaYear(new Date(), fechas[0])+ "</h2>");
+
+      fechasSort= fechas.sort(compararFechaYear);
+      $("#div_texto").append("</br><h2>" + fechasSort.join("</br>"));
+
+
+
      
 
     }
