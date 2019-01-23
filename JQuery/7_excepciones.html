@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<!--https://www.w3schools.com/js/js_errors.asp-->
+	<title>error js</title>
+	<meta charset="UTF-8" /> 
+	
+</head>
+
+
+<body>
+
+  <div id="div_texto"></div>
+
+  <script src="JQ/jquery-3.3.1.js" >
+    //Si tenemos servidores potentes usamos JQ/jquery-3.3.1.js, si usamos servidores gratuitos es mejor usar los de JQuery
+  
+  </script>
+  <script src="6_JQuery_masArray_fechas.js"></script>
+  <script> // se utilizaria en las partes de código donde pensamos que puede haber un error
+   try{
+     throw new Error("provocando un error ");
+     $("?div_texto").html("EEEEE!!!");
+     funcionInexistente("Buuuuu!!");
+
+   } catch(elError){ 
+    $("#div_texto").append("<p> ha habido una excepcion</p>");
+    $("#div_texto").append(elError.message);
+
+   } finally {
+    $("#div_texto").append("comprobando finally");
+
+
+   }
+     
+
+  </script>
+
+</body>
+
+</html>
