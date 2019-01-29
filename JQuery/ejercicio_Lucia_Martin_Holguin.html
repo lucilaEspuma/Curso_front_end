@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<!--https://www.w3schools.com/js/js_errors.asp-->
+	<title>Hello World!</title>
+	<meta charset="UTF-8" /> 
+	
+</head>
+
+
+
+<body>
+
+  <div id="div_texto">
+    <p>Por favor activa la opción de mostrar ventanas emergentes en tu ordenador</p>
+    <input type="button" id="boton_abrir" value="Abrir" onclick="abreVentana();">
+    <input type="button" id="boton_Cerrar" value="Cerrar" onclick="closepopup();">
+  </div>
+
+  <script src="JQ/jquery-3.3.1.js" >
+  //del objeto window la propiedad closed
+    //Si tenemos servidores potentes usamos JQ/jquery-3.3.1.js, si usamos servidores gratuitos es mejor usar los de JQuery
+  
+  </script>
+  
+  <script> // se utilizaria en las partes de código donde pensamos que puede haber un error
+  //closed valor buleano que indica si una ventana está cerrada.
+//var win = document.defaultView;
+     //Window.closed; 
+//var myWindow = window.open("", "myWindow", "width=200, height=100");
+
+     
+  </script>
+  <script>
+    var myWindow;
+
+function abreVentana(){
+ myWindow = window.open( "https://theuselessweb.com/","myWindow", "width=350", "height=100");
+ //myWindow = window.open( "http://makker.hu/makkeroni/","myWindow",["left=10"], "width=200", "height=100");
+}
+function closepopup(){
+   
+     myWindow.close();
+     //myWindow1.close();
+    }
+  </script>
+
+</body>
+
+</html>

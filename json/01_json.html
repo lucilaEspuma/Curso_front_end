@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // Se guarda en RAM en formato binario (serializar)
+    var hotel = new Object();
+    hotel.nombre = "hotel NH"; //ASCII 70 150
+    hotel.direccion = "c/La que sea, N";
+    hotel.precio = 70.5; //01100010101010100
+    hotel.abierto = true;
+
+
+    //Vamos a serializar: Convertir datos en binario en formato texto. 
+    var textoJSON = JSON.stringify(hotel); //stringify NOs combierte la informacion de un objeto en texto. JSON es un objeto de Javascript.
+
+    document.write(textoJSON);
+    /*resultado: { el valor de la izq de los dos puntos se denomina clave y el de la derecha se denomina valor.
+      "nombre":"hotel NH",
+      "direccion":"c/La que sea, N",
+      "precio":70.5,
+      "abierto":true
+      } >> texto plano: letras entendibles por un editor de texto*/
+
+    // vamos a hacer lo contrario, hemos creado un nuevo objeto del que estamos extrayendo informacion
+    var textoJSONOtro =
+      `{"nombreHotel":"hotel NH",
+      "direccion":"c/La que sea, 666",
+      "precio":70.5,
+      "abierto":true}` //los acentos graves indican que en JavaScript esto es un texto.
+    var objetoOtroHotel = JSON.parse(textoJSONOtro);
+    alert(objetoOtroHotel.direccion);
+    //JSON utiliza la nomenclatura de la notacion nativa de JavaScript
+    var miHotel = {
+      "nombre": "HOtel CHUCHI",
+      "precio": 1000,
+      "direccion": "c/ Panacea,10",
+      "abierto": true,
+      "menores": null
+
+    };
+    document.write(`<h2>${miHotel.nombre}</h2>`);
+    document.write(`<h2>${miHotel.precio}</h2>`);
+    document.write(`<h2>${miHotel.direccion}</h2>`);
+    document.write(`<h2>${miHotel.menores}</h2>`);
+  </script>
+</body>
+
+</html>

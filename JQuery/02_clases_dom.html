@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+</head>
+
+<body>
+
+  <input type="button" id="boton" value="probar">
+  <script src="JQ/jquery-3.3.1.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#boton").click(function () {
+        alert(fechaNac.getDia());
+      })
+    })
+    class FechaDom {
+      constructor(dia, mes, anio, id) {
+        id = this.id;
+        $("body").append(
+          `Día: <input id ="${id}dia" type= "number" value="${dia}"/>
+          Mes: <input id="${id}mes" type= "number" value="${mes}"/> 
+          Año: <input id= "${id}anio" type= "number" value="${anio}"/>`
+        );
+      }
+
+
+
+      getDia() {
+        var valorDia = parseInt($(`#${this.id}dia`).val());
+        return valorDia;
+      }
+      getMes() {
+        var mes = parseInt($(`#${this.id}mes`).val());
+        return mes;
+      }
+      getAnio() {
+        return parseInt($(`#${this.id}anio`).val());
+      }
+
+
+
+    }
+    var dateActual = new Date();
+    var fechaNac = new FechaDom(dateActual.getDate(), dateActual.getMonth(), dateActual.getFullYear(), "");
+    var fechaNacimiento_1 = new FechaDom(7, 9, 1982, "");
+    var fechaNacimiento_2 = new FechaDom(7, 9, 1982, "");
+    var fechaNacimiento_3 = new FechaDom(7, 9, 1982, "");
+
+    /*var dateAct = new Date();
+    var fechaNac = new FechaDom(
+      fechaNac.getDia(),
+      dateAct.getMonth(),
+      dateAct.getFullYear()
+    );*/
+
+    var miCumple = new Date(1982, 09, 7);
+    /* Crear campos de fecha (fechaDom) a partir de la fecha de cumpleaños.
+    Pensar como mejorar este "control":
+      -Añadir etiquetas a los campos.
+      -Como hacer para obtener Dia, Mes... con los métodos getDia(), etc()*/
+  </script>
+</body>
+
+</html>

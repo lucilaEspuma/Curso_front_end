@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Clases y objetos</title>
+</head>
+
+<body>
+  <h1>Clases y objetos</h1>
+  <script>
+    class Rectangulo {
+
+      //funcion que define las características fijas que todo objeto debe tener.
+      //This se refiere al objeto de la clase, en otros lenguajes se llama self.
+
+      constructor(nAlto, nAncho) {
+        this.ancho = nAncho;
+        this.alto = nAlto;
+      }
+
+      //Cuando definimos una función dentro de la clase solo necesitamos poner el nombre que le asignamos + parentesis +corchetes.
+
+      area() {
+        var areaTotal = this.ancho * this.alto;
+        return areaTotal;
+      }
+      perimetro() {
+        var perimetro = this.ancho * 2 + this.alto * 2;
+        return perimetro;
+      }
+    }
+    var otroRect = new Rectangulo(10, 5); //A este objeto podemos asignarle parametros que hemos definido en el constructor
+
+    var unRect = new Rectangulo();
+    unRect.alto = 10;
+    unRect.ancho = 5;
+    document.write("<h2>" + unRect.area() + "</br>" + unRect.perimetro() + "</h2>");
+
+    class Circulo {
+      constructor(nRadio) {
+        this.radio = nRadio;
+      }
+      areaCir() {
+        return Math.round(Math.PI * this.radio * this.radio);
+      }
+      perimetroCir() {
+        return Math.round(2 * Math.PI * this.radio);
+
+      }
+    }
+
+    var circuloo = new Circulo(3);
+    document.write("Area: " + circuloo.areaCir() + "</br> Perimetro: " + circuloo.perimetroCir());
+  </script>
+</body>
+
+</html>
