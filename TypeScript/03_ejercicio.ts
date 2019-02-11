@@ -4,15 +4,17 @@ interface IProducto {
 }
 
 class Camiseta implements IProducto {
-  talla: number;
-  //color: number;
+  talla: string;
+  color: string;
   precio: number;
-  constructor(talla: number) {
+  constructor(talla: string, precio: number) {
     this.talla = talla;
-    this.color = color;
+    this.precio = precio;
   }
   mostrar() {
     console.log(this.talla);
+    console.log(this.precio);
+    console.log(this.color);
   }
 }
 class Libro implements IProducto {
